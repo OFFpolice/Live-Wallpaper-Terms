@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Условия использования — Live Wallpaper</title>
+
+<style>
+:root{
+    --bg:#121212;
+    --card:#1e1e1e;
+    --text:#ffffff;
+    --secondary:#b0b0b0;
+    --accent:#4CAF50;
+    --border:rgba(255,255,255,.08);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.7;
+    min-height:100vh;
+}
+
+.container{
+    max-width:900px;
+    margin:0 auto;
+    padding:24px;
+}
+
+.card{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:20px;
+    padding:32px;
+    box-shadow:0 8px 30px rgba(0,0,0,.35);
+}
+
+.header{
+    text-align:center;
+    margin-bottom:30px;
+}
+
+h1{
+    font-size:2rem;
+    margin-bottom:10px;
+}
+
+.last-update{
+    color:var(--secondary);
+}
+
+h2{
+    margin-top:28px;
+    margin-bottom:12px;
+    color:var(--accent);
+    font-size:1.25rem;
+}
+
+p{
+    margin-bottom:12px;
+}
+
+ul{
+    margin:12px 0 12px 22px;
+}
+
+li{
+    margin-bottom:8px;
+}
+
+.footer{
+    margin-top:40px;
+    padding-top:20px;
+    border-top:1px solid var(--border);
+    text-align:center;
+    color:var(--secondary);
+    font-size:.9rem;
+}
+
+.fade-in{
+    opacity:0;
+    transform:translateY(20px);
+    transition:all .6s ease;
+}
+
+.fade-in.show{
+    opacity:1;
+    transform:translateY(0);
+}
+
+@media (max-width:768px){
+    .container{
+        padding:16px;
+    }
+
+    .card{
+        padding:24px;
+    }
+
+    h1{
+        font-size:1.7rem;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="card fade-in">
+
+        <div class="header">
+            <h1>Условия использования</h1>
+            <p class="last-update">
+                Дата последнего обновления: 13 июня 2026 г.
+            </p>
+        </div>
+
+        <p>
+            Используя приложение <strong>Live Wallpaper</strong>,
+            вы соглашаетесь с настоящими Условиями использования.
+        </p>
+
+        <h2>1. Назначение приложения</h2>
+        <p>
+            Приложение предназначено для установки пользовательских
+            видеофайлов в качестве живых обоев на устройствах Android.
+        </p>
+
+        <h2>2. Ответственность пользователя</h2>
+        <p>
+            Пользователь самостоятельно несет ответственность за:
+        </p>
+
+        <ul>
+            <li>используемые видеофайлы;</li>
+            <li>соблюдение авторских прав;</li>
+            <li>соблюдение законодательства своей страны.</li>
+        </ul>
+
+        <h2>3. Авторские права</h2>
+        <p>
+            Пользователь обязан иметь законное право на использование
+            устанавливаемых видеофайлов.
+        </p>
+
+        <p>
+            Разработчик не несет ответственности за нарушение пользователем
+            авторских или смежных прав.
+        </p>
+
+        <h2>4. Ограничение ответственности</h2>
+        <p>
+            Приложение предоставляется по принципу
+            «как есть» («AS IS»).
+        </p>
+
+        <p>
+            Разработчик не гарантирует:
+        </p>
+
+        <ul>
+            <li>совместимость со всеми устройствами Android;</li>
+            <li>отсутствие ошибок;</li>
+            <li>бесперебойную работу на всех версиях Android.</li>
+        </ul>
+
+        <p>
+            Разработчик не несет ответственности за любые прямые или косвенные
+            убытки, возникшие в результате использования Приложения.
+        </p>
+
+        <h2>5. Запрещенные действия</h2>
+        <p>
+            Пользователю запрещается:
+        </p>
+
+        <ul>
+            <li>использовать Приложение для незаконных целей;</li>
+            <li>распространять вредоносное программное обеспечение;</li>
+            <li>вмешиваться в работу Приложения способами, не предусмотренными разработчиком.</li>
+        </ul>
+
+        <h2>6. Изменения и прекращение поддержки</h2>
+        <p>
+            Разработчик вправе изменять функциональность Приложения,
+            выпускать обновления или прекратить поддержку без предварительного уведомления.
+        </p>
+
+        <h2>7. Изменение условий</h2>
+        <p>
+            Настоящие Условия могут обновляться в любое время.
+            Продолжение использования Приложения означает согласие пользователя
+            с новой редакцией документа.
+        </p>
+
+        <h2>8. Контакты</h2>
+        <p>
+            Связаться с разработчиком можно через официальный GitHub-репозиторий проекта.
+        </p>
+
+        <div class="footer">
+            © 2026 Live Wallpaper. Все права защищены.
+        </div>
+
+    </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const card = document.querySelector(".fade-in");
+
+    setTimeout(() => {
+        card.classList.add("show");
+    }, 150);
+});
+</script>
+
+</body>
+</html>
